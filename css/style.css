@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@font-face {
+    font-family: 'code39';
+    src: url('fonts/free3of9-webfont.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+.otraCodigoBarras{
+    font-family: 'code39';
+    font-size: 3.5em;
+}
+.credenF{
+    width: 488px; 
+    height: 311px; 
+    background-image: url('../img/frentergb.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0px auto;
+}
+.credenV{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 488px; 
+    height: 311px; 
+    background-image: url('../img/vueltargb.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0px auto;
+}
+.caja{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 293px;
+    margin-top: 130px;
+    /* background-color: rgba(255, 255, 100, .5); */
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #7C7A7E;
+}
+.caja1{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 293px;
+    margin-top: 215px;
+    /* background-color: rgba(255, 255, 100, .5); */
+    text-align: right;
+    font-weight: bold;
+    font-size: .8em;
+    color: #7C7A7E;
+}
+.caja2{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 293px;
+    margin-top: 270px;
+    /* background-color: rgba(255, 255, 100, .5); */
+    text-align: right;
+    font-weight: bold;
+    font-size: .7em;
+    color: #7C7A7E;
+}
+.fotoAlumno{
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 315px;
+}
+.vigencia{
+    position: absolute;
+    font-weight: bold;
+    font-size: .8em;
+    color: #7C7A7E;
+    /* background-color: rgba(255, 255, 100, .5); */
+    margin-top: 90px;
+    margin-left: 370px;
+}
+.matricula{
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-size: .9em;
+    /* background-color: rgba(255, 255, 100, .5); */
+    margin-top: 220px;
+    width: 488px; 
+}
+.codigoBarras{
+    position: absolute;
+    margin-top: 175px;
+    text-align: center;
+    /* background-color: rgba(255, 255, 100, .5); */
+    width: 488px; 
+}
+.barras{
+    height: 40px;
+}
+.firmaTitular{
+    width: 488px;
+    position: absolute;
+    margin: 210px auto;
+    text-align: center;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <title>Buscador</title>
+</head>
+<body>
+    <!-- <header>
+
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="videos/loopVideo.mp4" type="video/mp4">
+        </video>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">
+                
+            </div>
+            </div>
+        </div>
+    </header> -->
+    <header>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="videos/loopVideo.mp4" type="video/mp4">
+        </video>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 mx-auto mt-5">
+                                <img src="img/logoDragones.svg" style="width: 200px;" class="animate__animated animate__fadeInRight">
+                                <!-- <h1 class="bg-primary rounded text-center text-white p-3">Buscador</h1> -->
+                                <form action="resultado.php" method="POST" class="my-3">
+                                    <div class="input-group mb-3 animate__animated animate__fadeInLeft">
+                                        <input type="text" name="txtBuscador" class="form-control" placeholder="..." onKeypress="validacion()">
+                                        <button class="btn btn-success">Buscar</button>
+                                      </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+
+    <script>
+        function validacion() {
+            if (event.keyCode > 32 && event.keyCode < 48 || event.keyCode > 57 && event.keyCode < 65 || event.keyCode > 90 && event.keyCode < 97 || event.keyCode > 122 && event.keyCode < 160 || event.keyCode > 166 && event.keyCode < 190) event.returnValue = false;
+        }
+    </script>
+    
+</body>
+</html>
