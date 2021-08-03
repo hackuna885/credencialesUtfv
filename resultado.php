@@ -20,16 +20,16 @@ $txtBuscador = isset($_POST['txtBuscador']) ? $_POST['txtBuscador'] : '';
 
     <?php
         $con = new SQLite3("base.db") or die("Problemas para conectar");
-        $cs = $con -> query("SELECT * FROM vDataCredenciales WHERE comodin LIKE '%$txtBuscador%'");
+        $cs = $con -> query("SELECT * FROM vDataAlumnos WHERE comodin LIKE '%$txtBuscador%'");
 
         while ($resul = $cs -> fetchArray()) {
-            $matricula = $resul['matricula'];
-            $apellidos = $resul['apellidos'];
-            $nombres = $resul['nombres'];
-            $carrera = $resul['carrera'];
-            $vigencia = $resul['vigencia'];
-            $grupo = $resul['grupo'];
-            $cuat = $resul['cuat'];
+            $matricula = $resul['matriData'];
+            $aPaterno = $resul['aPaternoData'];
+            $aMaterno = $resul['aMaternoData'];
+            $nombres = $resul['nombreData'];
+            $carrera = $resul['carreraData'];
+            $grupo = $resul['grupoData'];
+            $cuat = $resul['cuatriData'];
 
 
             echo '
@@ -37,7 +37,7 @@ $txtBuscador = isset($_POST['txtBuscador']) ? $_POST['txtBuscador'] : '';
             <div class="credenF">
                 <div class="caja">
                     <p>'.$nombres.'</p>
-                    <p>'.$apellidos.'</p>
+                    <p>'.$aPaterno.' '.$aMaterno.'</p>
                 </div>
                 <div class="caja1">
                     <p>'.$matricula.'</p>
