@@ -20,10 +20,11 @@ $txtBuscador = isset($_POST['txtBuscador']) ? $_POST['txtBuscador'] : '';
 
     <?php
         $con = new SQLite3("base.db") or die("Problemas para conectar");
-        $cs = $con -> query("SELECT * FROM vDataAlumnos WHERE comodin LIKE '%$txtBuscador%'");
+        $cs = $con -> query("SELECT * FROM vDataAlumnos WHERE comodin LIKE '%$txtBuscador%' LIMIT 15");
 
         while ($resul = $cs -> fetchArray()) {
             $matricula = $resul['matriData'];
+            $matIngLicData = $resul['matIngLicData'];
             $aPaterno = $resul['aPaternoData'];
             $aMaterno = $resul['aMaternoData'];
             $nombres = $resul['nombreData'];
@@ -40,32 +41,32 @@ $txtBuscador = isset($_POST['txtBuscador']) ? $_POST['txtBuscador'] : '';
                     <p>'.$aPaterno.' '.$aMaterno.'</p>
                 </div>
                 <div class="caja1">
-                    <p>'.$matricula.'</p>
+                    <p>'.$matIngLicData.'</p>
                 </div>
                 <div class="caja2">
                     
                     <p>'.$carrera.'</p>
                 </div>
                 <div class="fotoAlumno">
-                    <img src="imgAlumnos/'.$matricula.'.jpg" style="width: 150px;">
+                    <img src="imgAlumnos/'.$matricula.'.jpg" style="width: 140px;">
                 </div>
             </div>
             <div class="credenV">
                 <div class="vigencia">
                     <p>
-                        2019-1/2021-1
+                        2023-2/2025-1
                     </p>
                 </div>
                 <div class="codigoBarras">
                     <div class="otraCodigoBarras">
-                        *'.$matricula.'*
+                        *'.$matIngLicData.'*
                     </div>
                 </div>
                 <!--  <div class="codigoBarras">
                      <img src="barcode.php?text=testing" class="barras"/>
                  </div> -->
                 <div class="matricula">
-                    <p>'.$matricula.'</p>
+                    <p>'.$matIngLicData.'</p>
                 </div>
                 <div class="firmaTitular">
                     <img src="img/firma.svg" style="width: 100px;">
