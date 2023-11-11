@@ -3,6 +3,9 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 header("Content-Type: text/html; Charset=UTF-8");
 
 $txtBuscador = isset($_POST['txtBuscador']) ? $_POST['txtBuscador'] : '';
+$matFinal = '';
+$matImg = '';
+$matIngLicImg = '';
 
 
 ?>
@@ -32,6 +35,17 @@ $txtBuscador = isset($_POST['txtBuscador']) ? $_POST['txtBuscador'] : '';
             $grupo = $resul['grupoData'];
             $cuat = $resul['cuatriData'];
 
+            $matImg = 'imgAlumnos/'.$matricula.'.jpg';
+            $matIngLicImg = 'imgAlumnos/'.$matIngLicData.'.jpg';
+
+            if (file_exists($matIngLicImg)) {
+                $matFinal = $matIngLicData.'.jpg';
+            }elseif(file_exists($matImg)){
+                $matFinal = $matricula.'.jpg';
+            }else{
+                $matFinal = 'usuario.jpg';
+            }
+
 
             echo '
 
@@ -48,13 +62,13 @@ $txtBuscador = isset($_POST['txtBuscador']) ? $_POST['txtBuscador'] : '';
                     <p>'.$carrera.'</p>
                 </div>
                 <div class="fotoAlumno">
-                    <img src="imgAlumnos/'.$matricula.'.jpg" style="width: 140px;">
+                    <img src="imgAlumnos/'.$matFinal.'" style="width: 140px;">
                 </div>
             </div>
             <div class="credenV">
                 <div class="vigencia">
                     <p>
-                        2023-2/2025-1
+                        2023-3/2025-3
                     </p>
                 </div>
                 <div class="codigoBarras">
